@@ -220,6 +220,7 @@ section.hero {
 
 @media (min-width: 550px) {
   section.hero {
+    
     padding-top: 4.5rem;
     padding-left: clamp(2rem, 1.2rem + 2.7vw, 4.3rem);
     padding-right: clamp(2rem, 1.4rem + 2.1vw, 4rem);
@@ -254,7 +255,7 @@ section.hero {
 
   .hero-big-name {
     font-size: 14.4vw;
-    text-align: left;
+    text-align: center;
     margin-top: -1.5rem;
     padding-bottom: 0;
     margin-bottom: 2rem;
