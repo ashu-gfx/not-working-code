@@ -129,6 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
     .hero-big-name
   `)
 
+  typeWritingAnimation();
+
   // 🚫 Reduced motion support
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     gsap.set('*', { clearProps: 'all' })

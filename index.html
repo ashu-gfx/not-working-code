@@ -1440,7 +1440,6 @@
     <script>
       class Figure {
         constructor(scene, imageElement, index) {
-          // Added index to track order
           this.$image = imageElement
           this.scene = scene
           this.loader = new THREE.TextureLoader()
@@ -1450,14 +1449,14 @@
 
           this.sizes = new THREE.Vector2(0, 0)
           this.offset = new THREE.Vector2(0, 0)
+
+          // Track the target mouse position and the smoothed movement
           this.mouse = new THREE.Vector2(0, 0)
+          this.lastMouseMove = Date.now()
 
           this.getSizes()
           this.createMesh()
 
-          // SEQUENCE LOGIC:
-          // If it's NOT the primary image, it's the back image.
-          // Back image starts at 3s. Front image starts at 3.8s.
           const sequenceDelay = this.$image.dataset.type === 'primary' ? 5 : 4.2
           this.intro(sequenceDelay)
 
@@ -1465,18 +1464,15 @@
         }
 
         intro(delay) {
-          // 1. Initial State
           this.uniforms.u_reveal.value = 0.0
 
-          // 2. Animate reveal with the passed-in delay
           gsap.to(this.uniforms.u_reveal, {
             value: 1.0,
-            duration: 2.0, // Slightly faster for snappier sequencing
+            duration: 2.0,
             delay: delay,
             ease: 'expo.inOut'
           })
 
-          // 3. Animate rotation
           const targetRotation =
             this.$image.dataset.type === 'primary'
               ? -9.54 * (Math.PI / 180)
@@ -1486,7 +1482,7 @@
           gsap.to(this.mesh.rotation, {
             z: targetRotation,
             duration: 2,
-            delay: delay + 0.2, // Rotates slightly after it starts growing
+            delay: delay + 0.2,
             ease: 'power2.out'
           })
         }
@@ -1505,7 +1501,7 @@
           this.uniforms = {
             u_image: { value: this.image },
             u_imagehover: { value: this.hover },
-            u_mouse: { value: this.mouse },
+            u_mouse: { value: new THREE.Vector2(0, 0) }, // Current shader value
             u_time: { value: 0 },
             u_reveal: { value: 0.0 },
             u_res: {
@@ -1535,15 +1531,37 @@
         }
 
         onMouseMove(event) {
-          gsap.to(this.mouse, {
-            duration: 0.5,
-            x: (event.clientX / window.innerWidth) * 2 - 1,
-            y: -(event.clientY / window.innerHeight) * 2 + 1
-          })
+          this.lastMouseMove = Date.now()
+          // Update target mouse position
+          this.mouse.x = (event.clientX / window.innerWidth) * 2 - 1
+          this.mouse.y = -(event.clientY / window.innerHeight) * 2 + 1
         }
 
         update() {
-          if (this.uniforms) this.uniforms.u_time.value += 0.01
+          if (!this.uniforms) return
+
+          const time = (this.uniforms.u_time.value += 0.01)
+          const idleTime = Date.now() - this.lastMouseMove
+
+          let targetX, targetY
+
+          if (idleTime > 1500) {
+            // AUTO MOVE LOGIC: Create a floating path using Sine/Cosine
+            // We use slightly different offsets for X and Y so it doesn't just move in a circle
+            targetX = Math.sin(time * 0.8) * 0.6
+            targetY = Math.cos(time * 0.6) * 0.6
+          } else {
+            // FOLLOW MOUSE
+            targetX = this.mouse.x
+            targetY = this.mouse.y
+          }
+
+          // Smoothly interpolate (Lerp) towards the target
+          // 0.05 is the easing factor (smaller = slower/smoother)
+          this.uniforms.u_mouse.value.x +=
+            (targetX - this.uniforms.u_mouse.value.x) * 0.05
+          this.uniforms.u_mouse.value.y +=
+            (targetY - this.uniforms.u_mouse.value.y) * 0.05
         }
       }
 
@@ -1572,14 +1590,12 @@
           )
           this.camera.position.set(0, 0, perspective)
 
-          // Inside class Scene constructor
           this.figures = []
           const images = document.querySelectorAll(
             '.tile__image, .tile__image1'
           )
 
           images.forEach((img, index) => {
-            // We pass the index now
             this.figures.push(new Figure(this.scene, img, index))
           })
 
@@ -1618,9 +1634,12 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <!-- Add this script to your HTML if you don't have it // -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
 
     <!-- header -->
 
+    <script src="js/auto-typing.js"></script>
     <script src="js/header.js"></script>
     <script src="js/pop.js"></script>
     <script src="js/stats.js"></script>

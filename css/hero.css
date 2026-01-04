@@ -39,6 +39,22 @@ section.hero {
   letter-spacing: -1px;
 }
 
+
+/* typing animation */
+.hero-title-secondary .text-inner::after {
+  content: "|";
+  margin-left: 5px;
+  animation: blink 1s step-end infinite;
+  color: #151515; /* or your brand color */
+}
+
+@keyframes blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+
 /* =========================
    Hero Row
 ========================= */
