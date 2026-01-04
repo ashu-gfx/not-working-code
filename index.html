@@ -181,8 +181,8 @@
             <div class="hero-sec">
               <div class="tile1">
                 <img
-                  src="images/hero2.png"
-                  data-hover="images/hero3.png"
+                  src="https://res.cloudinary.com/dumon96kf/image/upload/v1767512309/hero2_lf8zih.png"
+                  data-hover="https://res.cloudinary.com/dumon96kf/image/upload/v1767512310/hero3_aoqdxy.png"
                   data-type="secondary"
                   class="tile__image1"
                   alt="Secondary Hero"
@@ -192,23 +192,33 @@
             <div class="hero-img">
               <div class="tile">
                 <img
-                  src="images/hero1.png"
-                  data-hover="images/hero4.png"
+                  src="https://res.cloudinary.com/dumon96kf/image/upload/v1767512310/hero1_un6uiw.png"
+                  data-hover="https://res.cloudinary.com/dumon96kf/image/upload/v1767512310/hero4_v4lehg.png"
                   data-type="primary"
-                  class="tile__image"
+                  class="tile__image cloud-optimize"
                   alt="Main Hero"
                 />
               </div>
             </div>
             <div class="circles">
-              <img src="https://res.cloudinary.com/dumon96kf/image/upload/v1767292338/hero-circles_gxu1al.svg" />
+              <img
+                src="https://res.cloudinary.com/dumon96kf/image/upload/v1767292338/hero-circles_gxu1al.svg"
+              />
             </div>
             <div class="img-orange">
-              <img src="images/hero2.png" />
+              <img
+                class="cloud-img"
+                data-cloud-id="v1767512309/hero2_lf8zih.png"
+                src=""
+              />
             </div>
 
             <div class="img-main">
-              <img src="images/hero1.png" />
+              <img
+                class="cloud-img"
+                data-cloud-id="v1767512310/hero1_un6uiw.png"
+                src=""
+              />
             </div>
           </div>
 
@@ -289,11 +299,29 @@
     <section class="gallery-section">
       <div class="gallery-container">
         <div class="images img-left">
+          <!-- <img
+            src="https://res.cloudinary.com/dumon96kf/image/upload/f_auto,q_auto,w_800/v1767291510/gallery-img1_zxmpxx.png"
+            srcset="
+              https://res.cloudinary.com/dumon96kf/image/upload/f_auto,q_auto,w_300/v1767291510/gallery-img1_zxmpxx.png   300w,
+              https://res.cloudinary.com/dumon96kf/image/upload/f_auto,q_auto,w_600/v1767291510/gallery-img1_zxmpxx.png   600w,
+              https://res.cloudinary.com/dumon96kf/image/upload/f_auto,q_auto,w_900/v1767291510/gallery-img1_zxmpxx.png   900w,
+              https://res.cloudinary.com/dumon96kf/image/upload/f_auto,q_auto,w_1200/v1767291510/gallery-img1_zxmpxx.png 1200w,
+              https://res.cloudinary.com/dumon96kf/image/upload/f_auto,q_auto,w_1600/v1767291510/gallery-img1_zxmpxx.png 1600w,
+              https://res.cloudinary.com/dumon96kf/image/upload/f_auto,q_auto,w_2000/v1767291510/gallery-img1_zxmpxx.png 2000w
+            "
+            sizes="(max-width: 640px) 95vw, 
+           (max-width: 1024px) 50vw, 
+           (max-width: 1920px) 33vw, 
+           800px"
+            alt="Gallery visual for service section"
+            loading="lazy"
+            decoding="async"
+          /> -->
           <img
-            src="https://res.cloudinary.com/dumon96kf/image/upload/v1767291510/gallery-img1_zxmpxx.png"
-            alt=""
+            class="cloud-img"
+            data-cloud-id="v1767291510/gallery-img1_zxmpxx.png"
+            alt="Description 1"
           />
-          <!-- <img src="videos/p1.mp4" alt="" /> -->
         </div>
         <div class="images img-center">
           <video
@@ -301,21 +329,53 @@
             loop
             muted
             playsinline
-            webkit-playsinline
-            preload="auto"
-            >
-            <!-- poster="https://www.dropbox.com/scl/fi/hbesm9vsptgshoo9dw70c/fallback.gif?rlkey=1vwwc4yo4g82gfbfnshx2jsbq&st=bw2layuy&raw=1" -->
+            preload="metadata"
+            class="lazy-video"
+            poster="https://res.cloudinary.com/dumon96kf/video/upload/f_auto,q_auto,w_800/v1767291601/My_Video2_fzjjdl.jpg"
+          >
             <source
-              src="https://res.cloudinary.com/dumon96kf/video/upload/v1767291601/My_Video2_fzjjdl.mp4"
+              media="(min-width: 1025px)"
+              src="https://res.cloudinary.com/dumon96kf/video/upload/f_webm,q_auto,w_1920,vc_vp9/v1767291601/My_Video2_fzjjdl.webm"
+              type="video/webm"
+            />
+            <source
+              media="(min-width: 1025px)"
+              src="https://res.cloudinary.com/dumon96kf/video/upload/f_mp4,q_auto,w_1920/v1767291601/My_Video2_fzjjdl.mp4"
               type="video/mp4"
             />
+
+            <source
+              media="(min-width: 641px)"
+              src="https://res.cloudinary.com/dumon96kf/video/upload/f_webm,q_auto,w_1280,vc_vp9/v1767291601/My_Video2_fzjjdl.webm"
+              type="video/webm"
+            />
+            <source
+              media="(min-width: 641px)"
+              src="https://res.cloudinary.com/dumon96kf/video/upload/f_mp4,q_auto,w_1280/v1767291601/My_Video2_fzjjdl.mp4"
+              type="video/mp4"
+            />
+
+            <source
+              src="https://res.cloudinary.com/dumon96kf/video/upload/f_webm,q_auto,w_640,vc_vp9/v1767291601/My_Video2_fzjjdl.webm"
+              type="video/webm"
+            />
+            <source
+              src="https://res.cloudinary.com/dumon96kf/video/upload/f_mp4,q_auto,w_640/v1767291601/My_Video2_fzjjdl.mp4"
+              type="video/mp4"
+            />
+
             Your browser does not support the video tag.
           </video>
         </div>
         <div class="images img-right">
-          <img
+          <!-- <img
             src="https://res.cloudinary.com/dumon96kf/image/upload/v1767291512/gallery-img2_qkyptg.png"
             alt=""
+          /> -->
+          <img
+            class="cloud-img"
+            data-cloud-id="v1767291512/gallery-img2_qkyptg.png"
+            alt="Description 2"
           />
         </div>
       </div>
@@ -660,7 +720,11 @@
 
     <section class="skills-section">
       <div class="skills-wrapper">
-        <img src="https://res.cloudinary.com/dumon96kf/image/upload/v1767292444/skills_hq4h6m.png" alt="" srcset="" />
+        <img
+          src="https://res.cloudinary.com/dumon96kf/image/upload/v1767292444/skills_hq4h6m.png"
+          alt=""
+          srcset=""
+        />
         <!-- GRID OVERLAY -->
         <div class="grid-overlay"></div>
 
@@ -921,7 +985,7 @@
             </div>
 
             <div id="view-view-container" class="view-list">
-              <div class="view-item ">
+              <div class="view-item">
                 <button class="view-button">
                   <span class="view-question">View Details</span>
 
@@ -977,7 +1041,7 @@
             </div>
 
             <div id="view-view-container" class="view-list">
-              <div class="view-item ">
+              <div class="view-item">
                 <button class="view-button">
                   <span class="view-question">View Details</span>
 
@@ -1029,7 +1093,7 @@
             </div>
 
             <div id="view-view-container" class="view-list">
-              <div class="view-item ">
+              <div class="view-item">
                 <button class="view-button">
                   <span class="view-question">View Details</span>
 
@@ -1556,11 +1620,13 @@
     ></script>
 
     <!-- header -->
-    
+
     <script src="js/header.js"></script>
     <script src="js/pop.js"></script>
     <script src="js/stats.js"></script>
     <script src="js/gallery-section.js"></script>
+    <script src="js/responsive.js"></script>
+
     <script src="js/footer-stats.js"></script>
     <script src="js/benifits-heading.js"></script>
     <script src="js/experience.js"></script>

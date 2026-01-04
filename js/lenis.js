@@ -37,7 +37,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     const target = this.getAttribute('href')
 
     lenis.scrollTo(target, {
-      offset: -100, // Adjust this to match your header height
+      offset: -150, // Adjust this to match your header height
       duration: 1.5
     })
   })
