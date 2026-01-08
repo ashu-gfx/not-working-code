@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Travel Agency Website Design',
       tab: 'Dev',
       imageUrl:
-        'https://res.cloudinary.com/dumon96kf/image/upload/v1767515349/p12_yae1au.png',
+        'https://res.cloudinary.com/dumon96kf/image/upload/v1767860101/sundown_qubyho.png',
       videoUrl: '',
       tags: ['Figma'],
       link: 'https://ashu-gfx.github.io/Sundown-studio-website-gsap-1/' // Added link
@@ -161,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Travel Agency Website Design',
       tab: 'Dev',
       imageUrl:
-        'https://res.cloudinary.com/dumon96kf/image/upload/v1767515349/p12_yae1au.png',
+        'https://res.cloudinary.com/dumon96kf/image/upload/v1767860099/DUO_w20gpa.png',
       videoUrl: '',
       tags: ['Figma'],
       link: 'https://ashu-gfx.github.io/PROJECT-3-DUO-main/' // Added link
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Travel Agency Website Design',
       tab: 'Dev',
       imageUrl:
-        'https://res.cloudinary.com/dumon96kf/image/upload/v1767515349/p12_yae1au.png',
+        'https://res.cloudinary.com/dumon96kf/image/upload/v1767860104/RAY-ben_vfaabu.png',
       videoUrl: '',
       tags: ['Figma'],
       link: 'https://ashu-gfx.github.io/RAY-BAN-REDESIGN-main/' // Added link
@@ -183,32 +183,65 @@ document.addEventListener('DOMContentLoaded', () => {
       category: 'Travel Agency Website Design',
       tab: 'Dev',
       imageUrl:
-        'https://res.cloudinary.com/dumon96kf/image/upload/v1767515349/p12_yae1au.png',
+        'https://res.cloudinary.com/dumon96kf/image/upload/v1767860102/rejouice_vjynfl.png',
       videoUrl: '',
       tags: ['Figma'],
       link: 'https://ashu-gfx.github.io/Rejoice-website-clone-gsap/' // Added link
     },
     {
       id: 'p17',
-      title: 'FIGMA HEADPHONE PROTOTYPING',
+      title: 'Image Trail Hover Effect',
       category: 'Travel Agency Website Design',
       tab: 'Dev',
       imageUrl:
-        'https://res.cloudinary.com/dumon96kf/image/upload/v1767515349/p12_yae1au.png',
+        'https://res.cloudinary.com/dumon96kf/image/upload/v1767860102/image_trail_gtxwju.png',
       videoUrl: '',
       tags: ['Figma'],
-      link: 'https://www.behance.net/gallery/171925489/FIGMA-HEADPHONE-PROTOTYPING' // Added link
+      link: 'https://ashu-gfx.github.io/Imagetrail-popin-hovereffect-following-mouse/' // Added link
     },
     {
-      id: 'p17',
-      title: 'FIGMA HEADPHONE PROTOTYPING',
-      category: 'Travel Agency Website Design',
+      id: 'p18',
+      title: 'Image Tilt Effect',
+      category: '',
       tab: 'Dev',
       imageUrl:
-        'https://res.cloudinary.com/dumon96kf/image/upload/v1767515349/p12_yae1au.png',
+        'https://res.cloudinary.com/dumon96kf/image/upload/v1767860337/image-tilt_huymho.png',
       videoUrl: '',
       tags: ['Figma'],
-      link: 'https://www.behance.net/gallery/171925489/FIGMA-HEADPHONE-PROTOTYPING' // Added link
+      link: 'https://ashu-gfx.github.io/image-tilt-effect/' // Added link
+    },
+    {
+      id: 'p19',
+      title: 'Calm Creative Agency',
+      category: '',
+      tab: 'Dev',
+      imageUrl:
+        'https://res.cloudinary.com/dumon96kf/image/upload/v1767883836/calm_1_efxdds.png',
+      videoUrl: '',
+      tags: ['Figma'],
+      link: 'https://20012511.github.io/calm/' // Added link
+    },
+    {
+      id: 'p20',
+      title: 'Finance Agency Landing Page',
+      category: '',
+      tab: 'Dev',
+      imageUrl:
+        'https://res.cloudinary.com/dumon96kf/image/upload/v1767883639/Finan-gfx_1_h0upjr.png',
+      videoUrl: '',
+      tags: ['Figma'],
+      link: 'https://20012511.github.io/Finan-Gfx/' // Added link
+    },
+    {
+      id: 'p21',
+      title: 'Finance Agency Landing Page',
+      category: '',
+      tab: 'Dev',
+      imageUrl:
+        'https://res.cloudinary.com/dumon96kf/image/upload/v1767890713/Brick_yynv7y.png',
+      videoUrl: '',
+      tags: ['Figma'],
+      link: 'https://20012511.github.io/brick/' // Added link
     }
   ]
 
