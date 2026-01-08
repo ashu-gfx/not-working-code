@@ -1666,7 +1666,7 @@
         update() {
           if (!this.uniforms) return
 
-          const time = (this.uniforms.u_time.value += 0.02)
+          const time = (this.uniforms.u_time.value += 0.015)
           const idleTime = Date.now() - this.lastMouseMove
 
           let targetX, targetY
