@@ -1682,9 +1682,9 @@
             // REDUCE THE DELAY:
             // If we just entered idle mode (between 300ms and 1000ms),
             // we increase the lerp factor to "snap" it into the auto-path quickly.
-            if (idleTime < 1000) {
-              lerpFactor = 0.10
-            }
+            // if (idleTime < 1000) {
+            //   lerpFactor = 0.10
+            // }
           } else {
             // FOLLOW MOUSE
             targetX = this.mouse.x

@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       id: 'p21',
-      title: 'Finance Agency Landing Page',
+      title: 'Brick Constructions Agency Landing Page',
       category: '',
       tab: 'Dev',
       imageUrl:
